@@ -5,7 +5,8 @@
 #include <glad.h>
 #include <glfw3.h>
 
-#include "Shador.cpp"
+#include "Shador.hpp"
+#include "Neurons.hpp"
 
 
 
@@ -14,7 +15,6 @@ int main() {
 	readbmp();
 
 	for (int i = 0; i < infoheader.biHeight*infoheader.biWidth; i++) {
-		//std::cout << (int)shading[i] << " ";
 		printf("%03d ", (int)shading[i]);
 	}
 

@@ -23,5 +23,8 @@
     <ClInclude Include="Shador.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Neurons.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
