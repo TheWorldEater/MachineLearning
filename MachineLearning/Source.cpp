@@ -2,8 +2,6 @@
 #include <vector>
 #include <iostream>
 #include <stdio.h>
-#include <glad.h>
-#include <glfw3.h>
 
 
 std::vector<int> shading;
