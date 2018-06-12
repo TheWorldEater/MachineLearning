@@ -11,29 +11,7 @@ BITMAPINFOHEADER infoheader;
 
 
 
-int error = 0;
-void errorwrite() {
-	switch (error) {
-	case 1:
-		std::cout << "fopen failed!" << std::endl;
-		break;
-	case 2:
-		std::cout << "fread failed!" << std::endl;
-		break;
-	case 3:
-		std::cout << "Not a BMP!" << std::endl;
-		break;
-	case 4:
-		std::cout << "Not supported Filetype!" << std::endl;
-		break;
-	case 5:
-		std::cout << "Some kind of supression" << std::endl;
-		break;
-	default:
-		std::cout << "Some other Error/Error with int error!" << std::endl;
-		break;
-	}
-}
+
 
 int round_up_to(int val, int round_to) {
 	val += round_to - 1;

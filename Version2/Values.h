@@ -51,6 +51,10 @@ void create() {
 	std::cout << "Wei viel Output wollen sie haben?" << std::endl;
 	std::cin >> c;
 
+	if (c<2) {
+		error = 6;
+		return;
+	}
 
 
 
