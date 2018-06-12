@@ -9,7 +9,7 @@
 BITMAPFILEHEADER fileheader;
 BITMAPINFOHEADER infoheader;
 
-std::vector<int> shading;
+
 
 int error = 0;
 void errorwrite() {

@@ -5,8 +5,10 @@
 #include <glad.h>
 #include <glfw3.h>
 
-#include "Shador.hpp"
 
+std::vector<int> shading;
+#include "Shador.hpp"
+#include "Values.h"
 
 
 int main() {
