@@ -29,7 +29,7 @@ void create() {
 		layer.at(0).node.push_back({});
 	}
 	if (a > 0) {
-		for (int j = 0; j < layer.at(0).node.size; j++) {
+		for (int j = 0; j < layer.at(0).node.size(); j++) {
 			for (int i = 0; i < shading.size(); i++) {
 				layer.at(0).node.at(j).weight.push_back({ 0 });
 			}
