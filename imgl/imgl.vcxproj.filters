@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="deps">
+      <UniqueIdentifier>{6ff178f0-af49-43c4-9c5c-7251edf9513c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{ed56f4ac-a512-401b-9dd0-35910c4803e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{92218740-41ae-44fc-937e-8006671926e2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="imgl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\dear_imgui\imgui.cpp">
+      <Filter>deps</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\dear_imgui\imgui_demo.cpp">
+      <Filter>deps</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\dear_imgui\imgui_draw.cpp">
+      <Filter>deps</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\glad\glad.c">
+      <Filter>deps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="basic_typedefs.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="colors.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler_specific.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="dear_imgui.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="defer.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="font.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="image_processing.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgl.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="math.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="opengl_draw.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="platform_window.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="preprocessor_stuff.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="prints.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="rendering.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="simple_file_io.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="sorted_vector.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="string_stuff.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vector.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_tv2.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_tv3.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_tv4.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\imgui.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\imgui.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\sdf_font.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\sdf_font.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\solid.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\solid.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\textured.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\textured.vert">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
