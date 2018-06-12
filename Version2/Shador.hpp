@@ -9,7 +9,7 @@
 BITMAPFILEHEADER fileheader;
 BITMAPINFOHEADER infoheader;
 
-unsigned char* shading;
+std::vector<int> shading;
 
 int error = 0;
 void errorwrite() {
@@ -58,7 +58,7 @@ void shador(FILE* pic) {
 			unsigned char* bgr = &src[y * row_size + x * 3];
 
 
-			shading[y * infoheader.biWidth + x] = (bgr[0] + bgr[1] + bgr[2]) / 3;
+			shading.push_back((bgr[0] + bgr[1] + bgr[2]) / 3);
 		}
 	}
 	free(src);
@@ -100,7 +100,6 @@ void readbmp() {
 		return;
 	}
 
-	shading = (unsigned char*)malloc(infoheader.biHeight * infoheader.biWidth * sizeof(char));
 	shador(pic);
 	if (error != 0) {
 		return;

@@ -14,7 +14,7 @@ int main() {
 	readbmp();
 
 	for (int i = 0; i < infoheader.biHeight*infoheader.biWidth; i++) {
-		printf("%03d ", (int)shading[i]);
+		printf("%03d ", shading.at(i));
 	}
 
 
@@ -27,7 +27,6 @@ int main() {
 	if (error != 0) {
 		errorwrite();
 	}
-	free(shading);
 	char stop;
 	std::cin >> stop;
 }
