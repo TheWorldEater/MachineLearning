@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test_nn.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{74176123-909A-4AF8-88C5-6BC59B776FA1}</ProjectGuid>
     <RootNamespace>MachineLearning</RootNamespace>
@@ -126,13 +132,6 @@
       <AdditionalDependencies>imgl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Shador.hpp" />
-    <ClInclude Include="Values.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

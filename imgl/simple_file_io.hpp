@@ -8,9 +8,9 @@
 #include "defer.hpp"
 
 namespace imgl {
-	inline bool load_text_file (::std::string const& filepath, ::std::string* text) {
+	inline bool load_text_file (cstr filepath, ::std::string* text) {
 
-		FILE* f = fopen(filepath.c_str(), "rb"); // we don't want "\r\n" to "\n" conversion, because it interferes with our file size calculation
+		FILE* f = fopen(filepath, "rb"); // we don't want "\r\n" to "\n" conversion, because it interferes with our file size calculation
 		if (!f)
 			return false;
 		defer {
@@ -63,9 +63,9 @@ namespace imgl {
 	}
 
 
-	inline bool load_binary_file (::std::string const& filepath, Blob* blob) {
+	inline bool load_binary_file (cstr filepath, Blob* blob) {
 
-		FILE* f = fopen(filepath.c_str(), "rb"); // we don't want "\r\n" to "\n" conversion
+		FILE* f = fopen(filepath, "rb"); // we don't want "\r\n" to "\n" conversion
 		if (!f)
 			return false;
 		defer {
@@ -85,9 +85,9 @@ namespace imgl {
 		return true;
 	}
 
-	inline bool load_fixed_size_binary_file (::std::string const& filepath, void* data, uptr sz) {
+	inline bool load_fixed_size_binary_file (cstr filepath, void* data, uptr sz) {
 
-		FILE* f = fopen(filepath.c_str(), "rb");
+		FILE* f = fopen(filepath, "rb");
 		if (!f)
 			return false;
 		defer {
@@ -108,9 +108,9 @@ namespace imgl {
 		return true;
 	}
 
-	inline bool write_fixed_size_binary_file (::std::string const& filepath, void const* data, uptr sz) {
+	inline bool write_fixed_size_binary_file (cstr filepath, void const* data, uptr sz) {
 
-		FILE* f = fopen(filepath.c_str(), "wb");
+		FILE* f = fopen(filepath, "wb");
 		if (!f)
 			return false;
 		defer {

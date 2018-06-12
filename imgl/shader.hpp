@@ -110,7 +110,7 @@ namespace imgl {
 			}
 		}
 
-		static bool load_shader (GLenum type, ::std::string const& filepath, GLuint* shad) {
+		static bool load_shader (GLenum type, cstr filepath, GLuint* shad) {
 			*shad = glCreateShader(type);
 
 			std::string source;
@@ -137,18 +137,18 @@ namespace imgl {
 				success = status == GL_TRUE;
 				if (!success) {
 					// compilation failed
-					fprintf(stderr, "OpenGL error in shader compilation \"%s\"!\n>>>\n%s\n<<<\n", filepath.c_str(), log_avail ? log_str.c_str() : "<no log available>");
+					fprintf(stderr, "OpenGL error in shader compilation \"%s\"!\n>>>\n%s\n<<<\n", filepath, log_avail ? log_str.c_str() : "<no log available>");
 				} else {
 					// compilation success
 					if (log_avail) {
-						fprintf(stderr, "OpenGL shader compilation log \"%s\":\n>>>\n%s\n<<<\n", filepath.c_str(), log_str.c_str());
+						fprintf(stderr, "OpenGL shader compilation log \"%s\":\n>>>\n%s\n<<<\n", filepath, log_str.c_str());
 					}
 				}
 			}
 
 			return success;
 		}
-		static Shader load_program (::std::string const& vert_filepath, ::std::string const& frag_filepath) {
+		static Shader load_program (cstr vert_filepath, cstr frag_filepath) {
 			Shader shad;
 		
 			shad.prog_handle = glCreateProgram();
@@ -183,11 +183,11 @@ namespace imgl {
 				success = status == GL_TRUE;
 				if (!success) {
 					// linking failed
-					fprintf(stderr, "OpenGL error in shader linkage \"%s\"|\"%s\"!\n>>>\n%s\n<<<\n", vert_filepath.c_str(), frag_filepath.c_str(), log_avail ? log_str.c_str() : "<no log available>");
+					fprintf(stderr, "OpenGL error in shader linkage \"%s\"|\"%s\"!\n>>>\n%s\n<<<\n", vert_filepath, frag_filepath, log_avail ? log_str.c_str() : "<no log available>");
 				} else {
 					// linking success
 					if (log_avail) {
-						fprintf(stderr, "OpenGL shader linkage log \"%s\"|\"%s\":\n>>>\n%s\n<<<\n", vert_filepath.c_str(), frag_filepath.c_str(), log_str.c_str());
+						fprintf(stderr, "OpenGL shader linkage log \"%s\"|\"%s\":\n>>>\n%s\n<<<\n", vert_filepath, frag_filepath, log_str.c_str());
 					}
 				}
 			}
@@ -206,7 +206,7 @@ namespace imgl {
 		::std::swap(l.prog_handle, r.prog_handle);
 	}
 
-	Shader load_shader (::std::string const& vert_filepath, ::std::string const& frag_filepath) {
+	Shader load_shader (cstr vert_filepath, cstr frag_filepath) {
 		return Shader::load_program(vert_filepath, frag_filepath);
 	}
 

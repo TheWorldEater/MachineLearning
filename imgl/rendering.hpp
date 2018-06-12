@@ -11,6 +11,8 @@
 #include "image_processing.hpp"
 #include "opengl_draw.hpp"
 
+#include "parse.hpp"
+
 namespace imgl {
 	using namespace gl_texture;
 
@@ -26,7 +28,7 @@ namespace imgl {
 			return c -' ';
 		}
 	};
-	Sized_Font load_font_file (std::string font_filepath, f32 desired_line_h_px) {
+	Sized_Font load_font_file (cstr font_filepath, f32 desired_line_h_px) {
 		Blob file_data;
 		assert(load_binary_file(font_filepath, &file_data));
 	
@@ -72,29 +74,9 @@ namespace imgl {
 		return sf;
 	}
 
-	Sized_Font* cached_font (std::string font_filepath, f32 desired_line_h_px) {
+	Sized_Font* cached_font (cstr font_filepath, f32 desired_line_h_px) {
 		static Sized_Font one_font_for_now = std::move( load_font_file(font_filepath, desired_line_h_px) );
 		return &one_font_for_now;
-	}
-
-	bool is_newline_c (char c) {	return c == '\n' || c == '\r'; }
-	bool newline (char** pcur) {
-		char* cur = *pcur;
-
-		char c = *cur;
-		if (!is_newline_c(c)) {
-			return false;
-		}
-
-		++cur;
-
-		char c2 = *cur;
-		if (is_newline_c(c2) && c2 != c) {
-			++cur; // skip '\n\r' and '\r\n'
-		}
-
-		*pcur = cur;
-		return true;
 	}
 
 	int count_lines (std::string const& s) {
@@ -103,7 +85,7 @@ namespace imgl {
 		char* cur = (char*)s.c_str();
 
 		while (*cur != '\0') {
-			if (newline(&cur)) {
+			if (n_parse::newline(&cur)) {
 				++lines;
 			} else {
 				++cur;
@@ -123,7 +105,7 @@ namespace imgl {
 
 		while (*cur != '\0') {
 		
-			if (newline(&cur)) {
+			if (n_parse::newline(&cur)) {
 				cur_point.x = 0;
 				cur_point.y += 500;
 				continue;
@@ -355,7 +337,7 @@ namespace imgl {
 
 			while (*cur != '\0')  {
 			
-				if (newline(&cur)) {
+				if (n_parse::newline(&cur)) {
 					point.x = rect_p.x;
 					point.y += -descent +line_gap +ascent;
 					continue;

@@ -17,10 +17,10 @@
 namespace imgl {
 //
 
-bool write_blob (::std::string const& name, void const* data, uptr sz) {
+bool write_blob (cstr name, void const* data, uptr sz) {
 	return write_fixed_size_binary_file(name, data, sz);
 }
-bool load_blob (::std::string const& name, void* data, uptr sz) {
+bool load_blob (cstr name, void* data, uptr sz) {
 	return load_fixed_size_binary_file(name, data, sz);
 }
 

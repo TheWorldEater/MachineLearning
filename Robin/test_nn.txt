@@ -1,0 +1,72 @@
+# input layer		N x M -> NxM input "image" -> N*M input activations
+5 x 5
+
+# hidden layers		array of input layers
+#  layer: N -> N neurons
+[2]
+  5
+  5
+# output layer		array of output neurons
+#  neuron: string, meaning of output neuron
+[3]
+  vertical lines
+  horizontal lines
+  diagonal lines
+  
+# training data
+#  training_data_set:
+#	name
+#	2d array of [M][N] of float
+#	array of expected output neuron activations
+  
+  vertical lines
+  1  0  1  0  1
+  1  0  1  0  1
+  1  0  1  0  1
+  1  0  1  0  1
+  1  0  1  0  1
+
+  1 0 0
+  
+  vertical lines 2
+  0  1  0  1  0
+  0  1  0  1  0
+  0  1  0  1  0
+  0  1  0  1  0
+  0  1  0  1  0
+
+  1 0 0
+  
+  horizontal lines
+  1  1  1  1  1
+  0  0  0  0  0
+  1  1  1  1  1
+  0  0  0  0  0
+  1  1  1  1  1
+
+  0 1 0
+
+#  horizontal lines
+#  0  0  0  0  0
+#  1  1  1  1  1
+#  0  0  0  0  0
+#  1  1  1  1  1
+#  0  0  0  0  0
+  
+  diagonal lines
+  1  0  0  1  0
+  0  0  1  0  0
+  0  1  0  0  1
+  1  0  0  1  0
+  0  0  1  0  0
+
+  0 0 1
+
+  diagonal lines
+  0  0  1  0  0
+  1  0  0  1  0
+  0  1  0  0  1
+  0  0  1  0  0
+  1  0  0  1  0
+
+  0 0 1

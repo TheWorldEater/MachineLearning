@@ -98,6 +98,9 @@
     <ClInclude Include="vector_tv4.hpp">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="parse.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\imgui.frag">

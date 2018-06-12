@@ -151,6 +151,7 @@
     <ClInclude Include="imgl.hpp" />
     <ClInclude Include="math.hpp" />
     <ClInclude Include="opengl_draw.hpp" />
+    <ClInclude Include="parse.hpp" />
     <ClInclude Include="platform_window.hpp" />
     <ClInclude Include="preprocessor_stuff.hpp" />
     <ClInclude Include="prints.hpp" />

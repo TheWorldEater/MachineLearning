@@ -6,8 +6,8 @@ namespace basic_typedefs {
 	typedef unsigned char		uchar;
 	typedef short				sshort;
 	typedef unsigned short		ushort;
-	typedef int					si;
-	typedef unsigned int		ui;
+	typedef int					sint;
+	typedef unsigned int		uint;
 	typedef long				slong;
 	typedef unsigned long		ulong;
 	typedef long long			sllong;
