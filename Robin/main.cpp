@@ -453,7 +453,6 @@ void build_and_evaluate_random_nn () {
 		print_output(i, activations.back(), cost, avg_cost);
 	}
 
-	return;
 }
 
 void draw () {
